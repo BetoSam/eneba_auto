@@ -35,13 +35,18 @@ public class validarProduto {
 
 	@Then("o sistema devera apresenta a categoria desejada")
 	public void oSistemaDeveraApresentaACategoriaDesejada() {
+		metodos.clicar(el.regiaoBrasil);
+		metodos.clicar(el.cookies);
+		metodos.clicar(el.btnTrustpilot);
 		metodos.evidencias("evidencia categoria acao");
-
+		
+		
 	}
 
 	@Given("que esteja na categoria acao")
 	public void queEstejaNaCategoriaAcao() {
 		metodos.clicar(el.gameDmc);
+		//metodos.clicar(el.gameStarWars);
 	}
 
 	@When("clicar no produto Dmc")
@@ -52,8 +57,8 @@ public class validarProduto {
 	@Then("o sistema devera abrir o produto desejado")
 	public void oSistemaDeveraAbrirOProdutoDesejado() {
 		metodos.evidencias("evidencia game Dmc");
-		metodos.clicar(el.regiaoBrasil);
-		metodos.clicar(el.cookies);
+		//metodos.clicar(el.regiaoBrasil);
+		//metodos.clicar(el.cookies);
 	}
 
 	@Given("que esteja na pagina do produto Dmc")

@@ -27,7 +27,11 @@ Elementos el = new Elementos();
 
 	@When("escolher uma categoria")
 	public void escolherUmaCategoria() {
+		metodos.clicar(el.regiaoBrasil);
+		metodos.clicar(el.cookies);
+		metodos.clicar(el.btnTrustpilot);
 		categori.selecionarcategoriagames("acao");
+		
 		metodos.pausa(4000);
 		
 		
@@ -35,6 +39,7 @@ Elementos el = new Elementos();
 
 	@Then("o sistema devera apresenta a categoria escolhida")
 	public void oSistemaDeveraApresentaACategoriaEscolhida() {
+		
 		metodos.evidencias("evidencia categoria");
 	}
 
@@ -45,14 +50,14 @@ Elementos el = new Elementos();
 
 	@When("escolher um produto")
 	public void escolherUmProduto() {
-		metodos.clicar(el.regiaoBrasil);
+		//metodos.clicar(el.regiaoBrasil);
 
 	}
 
 	@And("e clicar no campo comprar agora")
 	public void eClicarNoCampoComprarAgora() {
 		
-metodos.clicar(el.cookies);
+metodos.clicar(el.enviarParaCarrinho);
 	}
 
 	@Then("o produto devera ser enviado para o carrinho")
