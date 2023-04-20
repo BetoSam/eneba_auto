@@ -37,7 +37,6 @@ public class validarProduto {
 	public void oSistemaDeveraApresentaACategoriaDesejada() {
 		metodos.clicar(el.regiaoBrasil);
 		metodos.clicar(el.cookies);
-		metodos.clicar(el.btnTrustpilot);
 		metodos.evidencias("evidencia categoria acao");
 		
 		

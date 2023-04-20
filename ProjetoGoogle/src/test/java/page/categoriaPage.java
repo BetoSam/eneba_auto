@@ -26,7 +26,7 @@ public class categoriaPage extends DriversFactory {
 			if (categoria.equalsIgnoreCase("estrategeia")) {
 				categoria = "strategy-games";}
 			driver.findElement(
-					By.xpath("//div[@class='RXvh7P']//a[@class='UCOPAE'][@href='/category/" + categoria + "']"))
+					By.xpath("//a[@class='UCOPAE'][@href='/category/" + categoria + "']"))
 					.click();
 		}
 

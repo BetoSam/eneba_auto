@@ -7,13 +7,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class MeuRobo {
 	public void abrirChrome() {
 		WebDriverManager.chromedriver().setup();
-		System.setProperty("webdriver.http.factory","jdk-http-client");
+		System.setProperty("webdriver.http.factory", "jdk-http-client");
 
 		ChromeDriver smokDriver = new ChromeDriver();
-		smokDriver.get("https://www.amazon.com.br");	
-		
+		 smokDriver.get("https://www.kavak.com/br");
+
 	}
-public void acessarUmSite() {
-		
-}
+
+	public void acessarUmSite() {
+	
+
+	}
 }
