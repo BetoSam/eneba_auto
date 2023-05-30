@@ -1,5 +1,4 @@
 
-
 package metodos;
 
 import static org.junit.Assert.assertEquals;
@@ -8,6 +7,7 @@ import java.io.File;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -17,8 +17,10 @@ public class Metodos extends DriversFactory {
 	public void escrever(By elemento, String texto) {
 		driver.findElement(elemento).click();
 
-	}public void validarMensagem(By elemento, String  msgEsperada) {
-		String msgCapturado =driver.findElement(elemento).getText();
+	}
+
+	public void validarMensagem(By elemento, String msgEsperada) {
+		String msgCapturado = driver.findElement(elemento).getText();
 		assertEquals(msgEsperada, msgCapturado);
 	}
 
@@ -43,5 +45,14 @@ public class Metodos extends DriversFactory {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	public void validarTitulo(String titulo) {
+		assertEquals(titulo, driver.getTitle());
+	}
+
+	public void scroll() {
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollBy(0,6000)");
 	}
 }

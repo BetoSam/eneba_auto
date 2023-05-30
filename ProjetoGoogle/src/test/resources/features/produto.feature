@@ -15,11 +15,11 @@ Para validar produto Dmc no carrinho de compras
   
   Scenario: validar produto na categoria action
     Given que esteja na categoria acao
-    When clicar no produto Dmc
+    When clicar no produto Resident evil 4 Remake
     Then o sistema devera abrir o produto desejado
     
    Scenario: validar produto no carrinho de compras
-    Given que esteja na pagina do produto Dmc 
+    Given que esteja na pagina do produto Resident evil 4 Remake
     When clicar no campo compra agora 
     Then o produto devere ser enviado para o carrinho
     
